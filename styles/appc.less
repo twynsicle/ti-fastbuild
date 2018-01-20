@@ -114,7 +114,13 @@
 
     .build-button-container {
         display: flex;
+        justify-content: center;
         margin: auto 6px auto 0;
+        padding: 0 4px;
+        width: 52px;
+        button {
+            padding: 0 2px;
+        }
     }
 
     .build-button {
@@ -122,11 +128,6 @@
         border: none;
         margin: auto 0!important;
         text-align: right;
-    }
-
-    .build-select {
-        background-color: lighten(@base-background-color, 5%);
-        border: none;
     }
 
     /**
