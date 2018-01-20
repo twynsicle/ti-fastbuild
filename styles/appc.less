@@ -192,6 +192,10 @@
         overflow-y: scroll;
         font-family: monospace;
         user-select: text;
+        white-space: nowrap;
+        &.linewrap {
+            white-space: normal;
+        }
     }
 
     p.log {
@@ -224,10 +228,11 @@
 
     .row {
         margin: 15px 15px;
+        height: 22px;
     }
 
-    input {
-        margin-right: 7px
+    input, select {
+        float: right;
     }
 
 
