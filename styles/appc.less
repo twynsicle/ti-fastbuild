@@ -191,6 +191,27 @@
     background-color: #000;
     overflow-y: hidden;
 
+    .toolbar-left {
+        input {
+            min-width: 300px;
+        }
+    }
+
+    select {
+        width: 80px;
+        padding-left: 4px;
+    }
+
+    .button-right.btn {
+        margin-right: 6px;
+        &:focus {
+            box-shadow: none;
+        }
+        &:not(.selected) {
+            background-image: none;
+        }
+    }
+
     .console-messages {
         height: 100%;
         margin: 0 6px;
@@ -202,21 +223,25 @@
         &.linewrap {
             white-space: normal;
         }
-    }
 
-    .toolbar-left {
-        input {
-            min-width: 300px;
+        &[data-min-level=debug] {
+            p.trace { display: none; }
         }
-    }
+        &[data-min-level=info] {
+            p.trace { display: none; }
+            p.debug { display: none; }
+        }
+        &[data-min-level=warn] {
+            p.trace { display: none; }
+            p.debug { display: none; }
+            p.info { display: none; }
+        }
 
-    .button-right.btn {
-        margin-right: 6px;
-        &:focus {
-            box-shadow: none;
-        }
-        &:not(.selected) {
-            background-image: none;
+        &[data-min-level=error] {
+            p.trace { display: none; }
+            p.debug { display: none; }
+            p.info { display: none; }
+            p.warn { display: none; }
         }
     }
 
