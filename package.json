@@ -1,9 +1,9 @@
 {
-  "name": "appcelerator-titanium",
+  "name": "ti-fastbuild",
   "main": "./lib/index",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "description": "Axway Appcelerator Titanium build tools and UI for Atom",
-  "repository": "https://github.com/appcelerator/atom-appcelerator-titanium",
+  "repository": "https://github.com/twynsicle/ti-fastbuild",
   "license": "Apache-2.0",
   "engines": {
     "atom": ">1.21.0"
