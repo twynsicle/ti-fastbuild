@@ -276,6 +276,13 @@
     .row {
         margin: 5px 15px;
         height: 22px;
+
+        &.clean-build-row {
+            padding-bottom: 27px;
+        }
+        &.mask {
+            visibility: hidden;
+        }
     }
 
     input, select {
@@ -293,10 +300,9 @@
         justify-content: space-between;
     }
 
-    .btn {
-
+    progress {
+        width: 100%;
     }
-
 }
 
 .appc-generate-dialog {
@@ -384,4 +390,3 @@
         }
     }
 }
-
