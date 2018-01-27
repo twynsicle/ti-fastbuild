@@ -11,7 +11,7 @@ Offers the following additional features:
 * Only supports windows
 * Add the android build-tools to your path - C:\Users\{user.name}\AppData\Local\Android\Sdk\build-tools\27.0.3
 * Debug builds require Titanium 7
-* Runs builds via `appc run` this might require you to register your apps guid if you haven't already.
+* By default runs builds via `ti build` if you use `appc run` there is an option in the settting menu to customize this
 
 ## Features
 
@@ -33,7 +33,7 @@ This consists of two parts
 a) a file watcher that observes all changes to your /Resources directory and copies the changes into the unsigned apk in the build directory.
 b) the fastbuild button, this re-signs the apk and redeploys it to your device, hooking up logcat and the debugger.
 
-Notes: 
+Notes:
 * this only looks for JavaScript files
 * this will only work for changed files, added and deleted files will need a new build, this is because the Titanium build process indexes JavaScript files so you'll need to rebuild to have them included in the index.
 * Even if nothing has changed, fastbuild serves as a useful way of re-deploying a previous build to your device in a way that hooks up logcat and the debugger.
