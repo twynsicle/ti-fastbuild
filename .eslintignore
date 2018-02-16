@@ -1,2 +1,4 @@
 lib/providers/completions.js
 node_modules
+.idea
+package-lock.json
