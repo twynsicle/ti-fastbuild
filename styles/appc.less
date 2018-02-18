@@ -195,6 +195,16 @@
         input {
             min-width: 300px;
         }
+        margin-right: 10px;
+    }
+
+    .highlight-container {
+        padding-left: 15px;
+        font-size: 12px;
+        display: inline-block;
+        flex-basis: 50%;
+        height: 100%;
+        line-height: 45px
     }
 
     select {
@@ -248,6 +258,10 @@
             p.info { display: none; }
             p.warn { display: none; }
         }
+    }
+
+    .appc-timeline.active + .console-messages {
+        height: ~"calc(100% - 200px)";
     }
 
     p.log {
@@ -460,20 +474,38 @@
 
 .appc-timeline {
     .vis-timeline {
-        border: none;
+      border: none;
+      background-color: black;
+      border-bottom: 4px solid #21252b;
     }
-    
+
     .vis-time-axis {
         .vis-grid.vis-major {
-            border-color: #5f5f5f;
+          border-color: #21252b;
+          border-width: 5px;
         }
         .vis-grid.vis-minor {
-            border-color: #292929;
+            border-color: #21252b;
         }
     }
 
     .vis-panel.vis-bottom {
         display: none;
+    }
+
+    .vis-item {
+      background: #ccc;
+      border-color: transparent;
+    }
+
+    .open {
+        background: transparent;
+        border-color: transparent;
+        .vis-item-content {
+            background: linear-gradient(to left, transparent, #ccc);
+
+           // background-color: hotpink;
+        }
     }
 }
 
