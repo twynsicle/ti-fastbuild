@@ -9,6 +9,13 @@
 	},
 	"rules": {
 		"security/detect-non-literal-regexp": "off",
-		"linebreak-style": "off"
+		"linebreak-style": "off",
+
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-max-props-per-line": [false],
+		"react/jsx-first-prop-new-line": [false],
+		"react/jsx-closing-bracket-location": [false],
+		"react/jsx-no-bind": [false],
+		"react/no-string-refs": [false]
 	}
 }
