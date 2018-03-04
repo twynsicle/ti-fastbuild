@@ -186,98 +186,116 @@
 }
 
 .appc-console {
+  height: 100%;
+  padding: 0 0 44px 0;
+  background-color: #000;
+  overflow-y: hidden;
+
+  .toolbar-left {
+      input {
+          min-width: 300px;
+      }
+  }
+
+  select {
+      width: 80px;
+      padding-left: 4px;
+  }
+
+  .button-right.btn {
+      margin-right: 6px;
+      &:focus {
+          box-shadow: none;
+      }
+      &:not(.selected) {
+          background-image: none;
+      }
+  }
+
+  .console-messages {
+    list-style: none;
     height: 100%;
-    padding: 0 0 44px 0;
-    background-color: #000;
-    overflow-y: hidden;
-
-    .toolbar-left {
-        input {
-            min-width: 300px;
-        }
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 14px;
+    user-select: text;
+    white-space: nowrap;
+    &.linewrap {
+        white-space: normal;
+    }
+    &.hide-webview-messages {
+      .webview {
+          display: none;
+      }
+    }
+    &.hide-timestamps {
+      .timestamp {
+        display: none;
+      }
     }
 
-    select {
-        width: 80px;
-        padding-left: 4px;
+    &[data-min-level=debug] {
+      li.trace { display: none; }
+    }
+    &[data-min-level=info] {
+      li.trace { display: none; }
+      li.debug { display: none; }
+    }
+    &[data-min-level=warn] {
+      li.trace { display: none; }
+      li.debug { display: none; }
+      li.info { display: none; }
     }
 
-    .button-right.btn {
-        margin-right: 6px;
-        &:focus {
-            box-shadow: none;
-        }
-        &:not(.selected) {
-            background-image: none;
-        }
+    &[data-min-level=error] {
+      li.trace { display: none; }
+      li.debug { display: none; }
+      li.info { display: none; }
+      li.warn { display: none; }
     }
+  }
 
-    .console-messages {
-        height: 100%;
-        margin: 0 6px;
-        overflow-y: scroll;
-        font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-        font-size: 14px;
-        user-select: text;
-        white-space: nowrap;
-        &.linewrap {
-            white-space: normal;
-        }
-        &.hide-webview-messages {
-            .webview {
-                display: none;
-            }
-        }
+  li .timestamp {
+    display: inline-block;
+    padding: 0 5px;
+    background-color: #181a1f;
+    color: #535353;
+  }
 
-        &[data-min-level=debug] {
-            p.trace { display: none; }
-        }
-        &[data-min-level=info] {
-            p.trace { display: none; }
-            p.debug { display: none; }
-        }
-        &[data-min-level=warn] {
-            p.trace { display: none; }
-            p.debug { display: none; }
-            p.info { display: none; }
-        }
+  li .text {
+    margin-left: 5px;
+  }
 
-        &[data-min-level=error] {
-            p.trace { display: none; }
-            p.debug { display: none; }
-            p.info { display: none; }
-            p.warn { display: none; }
-        }
-    }
+  li.log {
+    margin: 0;
+    padding: 0;
+  }
 
-    p.log {
-        margin: 0;
-        padding: 0;
-    }
+  li.trace {
+    color: #999;
+  }
 
-    p.trace {
-        color: #999;
-    }
+  li.info {
+    color: #fff;
+  }
 
-    p.info {
-        color: #fff;
-    }
+  li.debug {
+    color: #dddd00;
+  }
 
-    p.debug {
-        color: #dddd00;
-    }
+  li.warn {
+    color: #ddaa00;
+  }
 
-    p.warn {
-        color: #ddaa00;
-    }
+  li.error {
+    color: #f55a5a;
+  }
 
-    p.error {
-        color: #f55a5a;
-    }
-
-    p.system {
-        color: #38aff5;
-    }
+  li.system {
+    color: #38aff5;
+  }
 }
 
 .appc-new-project-dialog {
