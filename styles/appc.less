@@ -113,17 +113,21 @@
     }
 
     .build-button-container {
-        display: flex;
-        justify-content: center;
-        margin: auto 6px auto 0;
-        padding: 0 4px;
-        width: 86px;
-        button {
-            padding: 0 2px;
-        }
-        .stop {
-            padding: 0 30px;
-        }
+      display: flex;
+      justify-content: center;
+      margin: auto 6px auto 0;
+      padding: 0 4px;
+      width: 105px;
+      button {
+        padding: 0 2px;
+      }
+      .stop {
+        padding: 0 40px;
+      }
+
+      .fast-build.dirty {
+        color: #38aff5;
+      }
     }
 
     .build-button {
@@ -192,7 +196,7 @@
   overflow-y: hidden;
 
   .toolbar-left {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 5px;
       input {
           min-width: 300px;
