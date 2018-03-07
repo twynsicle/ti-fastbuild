@@ -1,7 +1,7 @@
 {
   "name": "ti-fastbuild",
   "main": "./lib/index",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Titanium build tools and UI for Atom",
   "repository": "https://github.com/twynsicle/ti-fastbuild",
   "license": "Apache-2.0",
